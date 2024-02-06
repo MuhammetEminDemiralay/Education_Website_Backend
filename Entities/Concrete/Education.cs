@@ -11,11 +11,11 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public int EducationCategoryId { get; set; }
         public int EducationSubCategoryId { get; set; }
+        public int InstructorId { get; set; }
         public string EducationName { get; set; }
-        public List<string> EducationObjective { get; set; }
-        public List<string> EducationSummary { get; set; }
-        public List<string> TargetAudience { get; set; }
-        public List<string> UserRequirements { get; set; }
-        public List<string> Achievements { get; set; }
+        public int Like { get; set; }
+        public int Dislike { get; set; }
+        public int Participants { get; set; }
+        public int Time { get; set; }
     }
 }
