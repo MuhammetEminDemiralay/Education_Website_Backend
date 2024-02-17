@@ -1,6 +1,5 @@
 ﻿using Core.DataAccess.Abstract;
 using Core.Entites.Abstract;
-using DataAccess.Concrete.EntityFramework.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,7 +16,7 @@ namespace Core.DataAccess.Concrete
     {
         public void Add(TEntity entity)
         {
-            using (EducationContext context = new EducationContext())
+            using (TContext context = new TContext())
             {
                 var addEntity = context.Entry(entity);
                 addEntity.State = EntityState.Added;
@@ -27,7 +26,7 @@ namespace Core.DataAccess.Concrete
 
         public void Delete(TEntity entity)
         {
-            using (EducationContext context = new EducationContext())
+            using (TContext context = new TContext())
             {
                 var deleteEntity = context.Entry(entity);
                 deleteEntity.State = EntityState.Deleted;
@@ -37,7 +36,7 @@ namespace Core.DataAccess.Concrete
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
-            using (EducationContext context = new EducationContext())
+            using (TContext context = new TContext())
             {
                 return context.Set<TEntity>().Where(filter).SingleOrDefault();
             }
@@ -45,7 +44,7 @@ namespace Core.DataAccess.Concrete
 
         public List<TEntity> GetAll(Expression<Func<TEntity, bool>> filter = null)
         {
-            using (EducationContext context = new EducationContext())
+            using (TContext context = new TContext())
             {
                 return filter == null ? context.Set<TEntity>().ToList() : context.Set<TEntity>().Where(filter).ToList();
             }
@@ -53,7 +52,7 @@ namespace Core.DataAccess.Concrete
 
         public void Update(TEntity entity)
         {
-            using (EducationContext context = new EducationContext()) 
+            using (TContext context = new TContext()) 
             {
                 var updateEntity = context.Entry(entity);
                 updateEntity.State = EntityState.Modified;
