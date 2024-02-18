@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
+using Business.Constant;
 using Core.Utilities.Results;
+using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,29 +13,39 @@ namespace Business.Concrete
 {
     public class EducationManager : IEducationService
     {
+        IEducationDal _educationDal;
+
+        public EducationManager(IEducationDal educationDal)
+        {
+            _educationDal = educationDal;
+        }
+
         public IResult Add(Education education)
         {
-            throw new NotImplementedException();
+            _educationDal.Add(education);
+            return new SuccessResult(Messages.EducationAdd);
         }
 
         public IResult Delete(Education education)
         {
-            throw new NotImplementedException();
+            _educationDal.Delete(education);
+            return new SuccessResult(Messages.EducationDelete);
         }
 
         public IDataResult<Education> Get(int educationId)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<Education>(_educationDal.Get(p => p.Id == educationId), Messages.EducationGet);
         }
 
         public IDataResult<List<Education>> GetAll()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<Education>>(_educationDal.GetAll(), Messages.EducationListed);
         }
 
         public IResult Update(Education education)
         {
-            throw new NotImplementedException();
+            _educationDal.Update(education);
+            return new SuccessResult(Messages.EducationUpdate);
         }
     }
 }

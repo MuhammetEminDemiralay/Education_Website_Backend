@@ -17,6 +17,5 @@ namespace Entities.Concrete
         public int Like { get; set; }
         public int Dislike { get; set; }
         public int Participants { get; set; }
-        public int Time { get; set; }
     }
 }
