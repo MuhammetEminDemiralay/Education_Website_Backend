@@ -15,7 +15,6 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<Education> Educations { get; set; }
         public DbSet<EducationCategory> EducationCategories { get; set; }
         public DbSet<EducationCategoryImage> EducationCategoryImage { get; set; }
-        public DbSet<EducationDescription> EducationDescriptions { get; set; }
         public DbSet<EducationImage> EducationImages { get; set; }
         public DbSet<EducationSubCategory> EducationSubCategories { get; set; }
         public DbSet<EducationSubCategoryImage> EducationSubCategoryImages { get; set; }
@@ -26,6 +25,11 @@ namespace DataAccess.Concrete.EntityFramework.Context
         public DbSet<VideoSubTitle> VideoSubTitles { get; set; }
         public DbSet<VideoTitle> VideoTitle { get; set; }
 
+        public DbSet<EducationObjective> EducationObjectives { get; set; }
+        public DbSet<EducationSummary> EducationSummaries { get; set; }
+        public DbSet<EducationTargetAudience> EducationTargetAudinces { get; set; }
+        public DbSet<EducationRequirement> EducationRequirements { get; set; }
+        public DbSet<EducationAchievement> EducationAchievements { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

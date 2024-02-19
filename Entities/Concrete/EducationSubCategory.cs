@@ -1,6 +1,8 @@
-﻿namespace Entities.Concrete
+﻿using Core.Entites.Abstract;
+
+namespace Entities.Concrete
 {
-    public class EducationSubCategory
+    public class EducationSubCategory : IEntity
     {
         public int Id { get; set; }
         public int EducationCategoryId { get; set; }

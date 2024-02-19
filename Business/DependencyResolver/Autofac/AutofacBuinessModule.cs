@@ -17,6 +17,24 @@ namespace Business.DependencyResolver.Autofac
         {
             builder.RegisterType<EducationManager>().As<IEducationService>().SingleInstance();
             builder.RegisterType<EFEducationDal>().As<IEducationDal>().SingleInstance();
+
+            builder.RegisterType<EducationAchievementManager>().As<IEducationAchievementService>().SingleInstance();
+            builder.RegisterType<EFEducationAchievementDal>().As<IEducationAchievementDal>().SingleInstance();
+
+            builder.RegisterType<EducationObjectiveManager>().As<IEducationObjectiveService>().SingleInstance();
+            builder.RegisterType<EFEducationObjectiveDal>().As<IEducationObjectiveDal>().SingleInstance();
+
+            builder.RegisterType<EducationSummaryManager>().As<IEducationSummaryService>().SingleInstance();
+            builder.RegisterType<EFEducationSummaryDal>().As<IEducationSummaryDal>().SingleInstance();
+
+            builder.RegisterType<EducationRequirementManager>().As<IEducationRequirementService>().SingleInstance();
+            builder.RegisterType<EFEducationRequirementDal>().As<IEducationRequirementDal>().SingleInstance();
+
+            builder.RegisterType<EducationTargetAudienceManager>().As<IEducationTargetAudienceService>().SingleInstance();
+            builder.RegisterType<EFEducationTargetAudienceDal>().As<IEducationTargetAudienceDal>().SingleInstance();
+
+
+
         }
     }
 }
