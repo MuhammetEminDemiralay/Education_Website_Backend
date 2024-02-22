@@ -1,5 +1,6 @@
 ﻿using Core.Utilities.Results;
 using Entities.Concrete;
+using Entities.DTOs;
 
 
 namespace Business.Abstract
@@ -11,5 +12,10 @@ namespace Business.Abstract
         IResult Add(Education education);
         IResult Update(Education education);
         IResult Delete(Education education);
+
+        IDataResult<List<EducationDto>> GetAllEducationDetails();
+        IDataResult<EducationDto> GetEducationDetail(int educationId);
+
+
     }
 }

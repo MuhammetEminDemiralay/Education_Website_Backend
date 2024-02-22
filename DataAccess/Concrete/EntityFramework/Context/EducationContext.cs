@@ -11,7 +11,6 @@ namespace DataAccess.Concrete.EntityFramework.Context
     public class EducationContext : DbContext
     {
 
-
         public DbSet<Education> Educations { get; set; }
         public DbSet<EducationCategory> EducationCategories { get; set; }
         public DbSet<EducationCategoryImage> EducationCategoryImage { get; set; }

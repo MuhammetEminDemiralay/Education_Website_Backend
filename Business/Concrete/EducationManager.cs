@@ -3,6 +3,7 @@ using Business.Constant;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,6 +41,16 @@ namespace Business.Concrete
         public IDataResult<List<Education>> GetAll()
         {
             return new SuccessDataResult<List<Education>>(_educationDal.GetAll(), Messages.EducationListed);
+        }
+
+        public IDataResult<List<EducationDto>> GetAllEducationDetails()
+        {
+            return new SuccessDataResult<List<EducationDto>>(_educationDal.GetAllEducationDetails(), Messages.GetAllEducationDetails)
+        }
+
+        public IDataResult<EducationDto> GetEducationDetail(int educationId)
+        {
+            return new SuccessDataResult<EducationDto>(_educationDal.GetEducationDetail(p => p.Id == educationId), Messages.GetEducationDetail)
         }
 
         public IResult Update(Education education)

@@ -10,6 +10,6 @@ namespace Entities.Concrete
     public class EducationCategory : IEntity
     { 
         public int Id { get; set; }
-        public int EducationCategoryName { get; set; }
+        public string EducationCategoryName { get; set; }
     }
 }
