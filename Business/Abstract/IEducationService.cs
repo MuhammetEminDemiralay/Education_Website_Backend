@@ -15,7 +15,5 @@ namespace Business.Abstract
 
         IDataResult<List<EducationDto>> GetAllEducationDetails();
         IDataResult<EducationDto> GetEducationDetail(int educationId);
-
-
     }
 }

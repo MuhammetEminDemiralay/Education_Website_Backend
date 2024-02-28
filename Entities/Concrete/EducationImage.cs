@@ -11,7 +11,7 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public int EducationId { get; set; }
-        public int EducationImagePath { get; set; }
+        public string EducationImagePath { get; set; }
         public DateTime Date { get; set; }
     }
 }

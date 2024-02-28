@@ -33,7 +33,8 @@ namespace Business.DependencyResolver.Autofac
             builder.RegisterType<EducationTargetAudienceManager>().As<IEducationTargetAudienceService>().SingleInstance();
             builder.RegisterType<EFEducationTargetAudienceDal>().As<IEducationTargetAudienceDal>().SingleInstance();
 
-
+            builder.RegisterType<EducationImageManager>().As<IEducationImageService>().SingleInstance();
+            builder.RegisterType<EFEducationImageDal>().As<IEducationImageDal>().SingleInstance();
 
         }
     }

@@ -18,5 +18,10 @@ namespace Business.Constant
         public static string GetAllEducationDetails = "Education details listed";
         public static string GetEducationDetail = "Education detail";
 
+        public static string EducationImageUpdated = "Education image updated";
+        public static string EducationImageListed = "Education image listed";
+        public static string GetEducationImage = "Get education image";
+        public static string EducationImageDelete = "Education image deleted";
+        public static string EducationImageAdd  = "Education image added";
     }
 }

@@ -45,12 +45,12 @@ namespace Business.Concrete
 
         public IDataResult<List<EducationDto>> GetAllEducationDetails()
         {
-            return new SuccessDataResult<List<EducationDto>>(_educationDal.GetAllEducationDetails(), Messages.GetAllEducationDetails)
+            return new SuccessDataResult<List<EducationDto>>(_educationDal.GetAllEducationDetails(), Messages.GetAllEducationDetails);
         }
 
         public IDataResult<EducationDto> GetEducationDetail(int educationId)
         {
-            return new SuccessDataResult<EducationDto>(_educationDal.GetEducationDetail(p => p.Id == educationId), Messages.GetEducationDetail)
+            return new SuccessDataResult<EducationDto>(_educationDal.GetEducationDetail(p => p.Id == educationId), Messages.GetEducationDetail);
         }
 
         public IResult Update(Education education)

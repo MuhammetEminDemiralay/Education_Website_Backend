@@ -28,6 +28,30 @@ namespace WebApi.Controllers
             return BadRequest();
         }
 
+        [HttpGet("alleducationdetails")]
+        public IActionResult GetAllEducationDetails()
+        {
+            var result = _educationService.GetAllEducationDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest();
+        }
+
+        [HttpGet("geteducationdetail")]
+        public IActionResult GetEducationDetail(int educationId)
+        {
+            var result = _educationService.GetEducationDetail(educationId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+
+            return BadRequest();
+        }
+
         [HttpGet("get")]
         public IActionResult Get(int educationId)
         {
