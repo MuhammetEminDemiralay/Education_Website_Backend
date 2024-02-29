@@ -25,7 +25,8 @@ namespace Business.Concrete
 
         public IResult Add(IFormFile file, EducationImage educationImage)
         {
-            educationImage.EducationImagePath = ImageHelper.Add(file);
+
+            educationImage.EducationImagePath = ImageAndVideoHelper.Add(file);
             educationImage.Date = DateTime.Now;
             _educationImageDal.Add(educationImage);
             return new SuccessResult(Messages.EducationImageAdd);

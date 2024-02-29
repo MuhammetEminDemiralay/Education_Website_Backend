@@ -36,6 +36,16 @@ namespace Business.DependencyResolver.Autofac
             builder.RegisterType<EducationImageManager>().As<IEducationImageService>().SingleInstance();
             builder.RegisterType<EFEducationImageDal>().As<IEducationImageDal>().SingleInstance();
 
+            builder.RegisterType<EFVideoTitleDal>().As<IVideoTitleDal>().SingleInstance();
+            builder.RegisterType<VideoTitleManager>().As<IVideoTitleService>().SingleInstance();
+
+            builder.RegisterType<EFVideoSubTitleDal>().As<IVideoSubTitleDal>().SingleInstance();
+            builder.RegisterType<VideoSubTitleManager>().As<IVideoSubTitleService>().SingleInstance();
+
+            builder.RegisterType<EFEducationVideoDal>().As<IEducationVideoDal>().SingleInstance();
+            builder.RegisterType<EducationVideoManager>().As<IEducationVideoService>().SingleInstance();
+
+
         }
     }
 }

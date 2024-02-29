@@ -22,6 +22,8 @@ namespace Business.Constant
         public static string EducationImageListed = "Education image listed";
         public static string GetEducationImage = "Get education image";
         public static string EducationImageDelete = "Education image deleted";
-        public static string EducationImageAdd  = "Education image added";
+        public static string EducationImageAdd = "Education image added";
+
+        public static string EducationVideoAdded = "Education video added";
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Helper
 {
-    public static class ImageHelper
+    public static class ImageAndVideoHelper
     {
         static string directory = Directory.GetCurrentDirectory() + @"\Education\";
         static string pathImage = @"\Images\";
@@ -29,8 +29,10 @@ namespace Core.Utilities.Helper
                 Directory.CreateDirectory(directory + pathVideo);
             }
 
+            if ()
+            {
 
-
+            }
 
             using (FileStream fileStream = File.Create(directory + ((extension == ".jpeg" || extension == ".png") ? pathImage : pathVideo) + newFileName))
             {
@@ -38,9 +40,12 @@ namespace Core.Utilities.Helper
                 fileStream.Flush();
             }
 
-
-
             return (pathImage + newFileName).Replace("\\", "/"); ;
+        }
+
+        public static void DirectoryExist()
+        {
+
         }
     }
 }
